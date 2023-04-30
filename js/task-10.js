@@ -22,6 +22,7 @@ function onInputEvent(e) {
 
 function createBoxes(amount) {
   let size = 30;
+  const boxesArray = [];
 
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
@@ -29,9 +30,9 @@ function createBoxes(amount) {
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     size += 10;
-
-    boxes.append(box);
+    boxesArray.push(box);
   }
+  boxes.append(...boxesArray);
 }
 
 //очищуємо бокси
