@@ -17,5 +17,3 @@ const elements = ingredients.map(ingredient => {
 });
 
 ingredientsList.append(...elements);
-
-console.log(elements);
