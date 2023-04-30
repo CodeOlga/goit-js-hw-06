@@ -57,5 +57,5 @@ function onCreateBtnClick() {
 //при кліку на кнопку Create - викликати функцію destroyBoxes та видалити бокси
 
 function onDestroyBtnClick() {
-  destroyBoxes(amount);
+  destroyBoxes();
 }
