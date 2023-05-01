@@ -7,8 +7,10 @@ function onInputBlur(e) {
   const requiredLength = validationInput.dataset.length.trim();
   const numberValue = Number(requiredLength);
   if (inputValue === numberValue) {
+    validationInput.classList.remove('invalid');
     validationInput.classList.add('valid');
   } else {
+    validationInput.classList.remove('valid');
     validationInput.classList.add('invalid');
   }
 }
