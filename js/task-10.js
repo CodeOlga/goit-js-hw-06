@@ -1,20 +1,26 @@
-const inputNumber = document.querySelector('#controls input');
+const inputNumber = document.querySelector('#controls');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
-inputNumber.addEventListener('input', onInputEvent);
 createBtn.addEventListener('click', onCreateBtnClick);
 destroyBtn.addEventListener('click', onDestroyBtnClick);
 
 //задаємо змінну, далі вона буде змінюватись
 
-let amount = 0;
+// let amount = 0;
 
 //отримуемо число,що ввів користувач, і прирівнюємо до amount
 
-function onInputEvent(e) {
-  amount = e.target.value;
+// function onInputEvent(e) {
+//   amount = e.target.value;
+// }
+
+//при кліку на кнопку Create - викликати функцію createBoxes та створити бокси
+
+function onCreateBtnClick() {
+  const amount = Number(inputNumber.value);
+  createBoxes(amount);
 }
 
 //в залежності від amount створюємо відповідну кількість боксів
@@ -39,6 +45,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   boxes.innerHTML = '';
+  inputNumber.value = '';
 }
 
 //отримуємо рандомні кольори
@@ -49,11 +56,12 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-//при кліку на кнопку Create - викликати функцію createBoxes та створити бокси
+// //при кліку на кнопку Create - викликати функцію createBoxes та створити бокси
 
-function onCreateBtnClick() {
-  createBoxes(amount);
-}
+// function onCreateBtnClick() {
+//   const amount = Number(inputNumber.value);
+//   createBoxes(amount);
+// }
 
 //при кліку на кнопку Create - викликати функцію destroyBoxes та видалити бокси
 
