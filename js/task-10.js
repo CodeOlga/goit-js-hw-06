@@ -1,4 +1,5 @@
-const inputNumber = document.querySelector('input');
+//вибираємо інпут, що всередині с div c id controls
+const inputNumber = document.querySelector('#controls input');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
